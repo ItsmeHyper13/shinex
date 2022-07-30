@@ -8,6 +8,8 @@ from pyrogram import filters
 from strings import handlers as hndl
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 
-@sree.on_message(filters.command(hndl.START_CMD))
+START = hndl.START_CMD
+
+@sree.on_message(filters.command(START))
 async def start(sree, m: Message):
     await m.reply("Hey i am alive!")
