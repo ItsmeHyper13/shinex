@@ -5,7 +5,7 @@
 from pyrogram import Client
 import time
 from pyrogram import idle
-from config import (API_ID, API_HASH, BOT_TOKEN)
+from vars import (API_ID, API_HASH, BOT_TOKEN)
 
 sree = Client(
     ":memory:",
