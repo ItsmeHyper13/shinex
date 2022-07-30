@@ -5,7 +5,7 @@ import time, datetime
 from asyncio import sleep as rst
 from pyrogram import client as sree
 from pyrogram import filters
-from string import handlers as hndl
+from strings import handlers as hndl
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 
 @sree.on_message(filters.command(hndl.START_CMD))
