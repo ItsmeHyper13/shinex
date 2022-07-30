@@ -3,7 +3,7 @@
 # created by ItsmeHyper13
 import time, datetime
 from asyncio import sleep as rst
-from pyrogram import client as sree
+from pyrogram import Client as sree
 from pyrogram import filters
 from strings import handlers as hndl
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
