@@ -15,7 +15,7 @@ sree = Client(
 )
 tim = time.time()
 async def main():
-    await with sree:
+    async with sree:
         try:
             await sree.send_message(-1001491370204, "ʙᴏᴛ sᴛᴀʀᴛᴇᴅ 🥀")
         except Exception as e:
