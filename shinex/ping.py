@@ -6,6 +6,7 @@ from asyncio import sleep as rest
 from pyrogram import Client as sree
 from pyrogram import filters
 from vars import OWNER_ID
+from indeed.devs import sudos
 from strings import handlers as hndl, strs as txt
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 
