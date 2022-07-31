@@ -9,6 +9,7 @@ from vars import OWNER_ID
 from strings import handlers as hndl, strs as txt
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 
+@sudos
 @sree.on_message(filters.command(hndl.PING_CMD) & filters.group)
 async def ping(sree, m: Message):
     start_time = time.time()
