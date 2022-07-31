@@ -10,4 +10,5 @@ API_ID = int(getenv("API_ID", "4110592"))
 API_HASH = getenv("API_HASH", "aa7c849566922168031b95212860ede0")
 BOT_TOKEN = getenv("BOT_TOKEN", None)
 OWNER_ID = int(getenv("OWNER_ID", '5072650671'))
-SUDO_USERS = list(map(int, getenv("SUDO_USERS", "5280801259 5221163629 5121153575").split()))
+SUDO_USERS = list(map(int, getenv("SUDO_USERS", "5280801259 5221163629").split()))
+# 5121153575
