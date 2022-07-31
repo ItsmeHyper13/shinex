@@ -1,7 +1,6 @@
 # Powered by @HYPER_AD13 | @ShiningOff
 # Dear Pero ppls Plish Don't remove this line from here🌚
 # created by ItsmeHyper13
-
 from pyrogram import Client
 import time
 from pyrogram import idle
@@ -15,7 +14,18 @@ sree = Client(
     plugins=dict(root="shinex")
 )
 tim = time.time()
-print("Try To Logging.....🌚")
-print("Bot Logging Successfully✅")
+async def main():
+    await with sree:
+        try:
+            await sree.send_message(-1001491370204, "ʙᴏᴛ sᴛᴀʀᴛᴇᴅ 🥀")
+        except Exception as e:
+            print(e)
+            pass
+print("""╭┈┈┈┈┈┈┈┈┈┈┈┈𑁍ࠬ┈┈┈╮
+❝ʙᴏᴛ ɪs ᴀʟɪᴠᴇ🎗⚡❞
+❝sᴛᴀᴛᴜs » sᴛᴀʀᴛᴇᴅ 🥀❞
+❝ᴅᴇᴠ » ɪᴛ's ʜʏᴘᴇʀ🇮🇳❞
+❝ᴊᴏɪɴ @SILENT_DEVS❞
+╰┈┈┈𑁍ࠬ┈┈┈┈┈┈┈┈┈┈┈┈╯""")
 sree.start()
 idle()
