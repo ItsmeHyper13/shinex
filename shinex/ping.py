@@ -5,13 +5,13 @@ import time
 from asyncio import sleep as rest
 from pyrogram import Client as sree
 from pyrogram import filters
-from vars import OWNER_ID
-from indeed.devs import sudos
+from vars import OWNER_ID, SUDO_USERS as sudo
 from strings import handlers as hndl, strs as txt
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 
-@sudos
 @sree.on_message(filters.command(hndl.PING_CMD) & filters.group)
 async def ping(sree, m: Message):
     start_time = time.time()
-    await m.reply(txt.ping_01)
+    sender = m.from_user
+    if sender.id in sudo:
+        await m.reply(txt.ping_01)
