@@ -40,11 +40,10 @@ def get_readable_time(seconds: int) -> str:
 async def ping(sree, m: Message):
     start_time = time.time()
     me = await sree.get_users("me")
-    sender = m.from_user
     up = get_readable_time((time.time() - tim))
     end_time = time.time()
     ping1 = str(round((end_time - start_time) * 1000, 3)) + " ms"
-    if sender.id in sudo:
+    if m.from_user.id in sudo:
         e = await m.reply(txt.ping_01)
         await rest(1.5)
         await e.edit_text(
@@ -54,5 +53,5 @@ async def ping(sree, m: Message):
                 up,
             )
         )
-    if sender.id not in sudo:
+    if m.from_user.id not in sudo:
         await m.reply((txt.ping_02).format(sender.id))
