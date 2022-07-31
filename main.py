@@ -1,9 +1,9 @@
 # Powered by @HYPER_AD13 | @ShiningOff
 # Dear Pero ppls Plish Don't remove this line from here🌚
 # created by ItsmeHyper13
-from pyrogram import Client
 import time
-from pyrogram import idle
+import asyncio
+from pyrogram import Client, idle
 from vars import (API_ID, API_HASH, BOT_TOKEN)
 
 sree = Client(
@@ -27,5 +27,6 @@ print("""╭┈┈┈┈┈┈┈┈┈┈┈┈𑁍ࠬ┈┈┈╮
 ❝ᴅᴇᴠ » ɪᴛ's ʜʏᴘᴇʀ🇮🇳❞
 ❝ᴊᴏɪɴ @SILENT_DEVS❞
 ╰┈┈┈𑁍ࠬ┈┈┈┈┈┈┈┈┈┈┈┈╯""")
+
 sree.start()
 idle()
