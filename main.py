@@ -15,11 +15,7 @@ sree = Client(
     plugins=dict(root="shinex")
 )
 tim = time.time()
-
-
 print("Try To Logging.....🌚")
 print("Bot Logging Successfully✅")
-
-
 sree.start()
 idle()
