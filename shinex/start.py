@@ -19,9 +19,9 @@ async def start(sree, m: Message):
     if m.chat.id == user.id:
         e = await m.reply(
             (txt.start_01).format(
-                user.mention
+                user.username
             )
-            )
+        )
         await rest(2)
         await e.edit_text(
             (txt.start_02).format(
@@ -31,5 +31,14 @@ async def start(sree, m: Message):
         )
         await rest(2)
         await e.edit_text(txt.start_03)
+        await rest(1.5)
+        await e.delete()
+        await m.reply_sticker(txt.start_04)
+        await m.reply(
+            (txt.start_05).format(
+                user.mention,
+                me.mention
+            )
+        )
     if m.chat.id != user.id:
         await m.reply(404)
