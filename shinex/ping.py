@@ -16,4 +16,4 @@ async def ping(sree, m: Message):
     if sender.id in sudo:
         await m.reply(txt.ping_01)
     if sender.id not in sudo:
-        await m.reply("saar be in your avkat me")
+        await m.reply((txt.ping_02).format(sender.id))
