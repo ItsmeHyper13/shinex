@@ -19,14 +19,14 @@ async def start(sree, m: Message):
     if m.chat.id == user.id:
         e = await m.reply(
             (txt.start_01).format(
-                user.username
+                user.mention
             )
         )
         await rest(2)
         await e.edit_text(
             (txt.start_02).format(
                 me.first_name,
-                owner.mention
+                owner.username
             )
         )
         await rest(2)
