@@ -14,6 +14,8 @@ sree = Client(
     bot_token=BOT_TOKEN,
     plugins=dict(root="shinex")
 )
+tim = time.time()
+
 
 print("Try To Logging.....🌚")
 print("Bot Logging Successfully✅")
