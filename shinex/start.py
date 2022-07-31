@@ -16,18 +16,20 @@ async def start(sree, m: Message):
     user = m.from_user
     me = await sree.get_users("me")
     owner = await sree.get_users(OWNER_ID)
-    e = await m.reply(
-        (txt.start_01).format(
-            user.mention
+    if m.chat.id == user.id:
+        e = await m.reply(
+            (txt.start_01).format(
+                user.mention
+            )
+            )
+        await rest(2)
+        await e.edit_text(
+            (txt.start_02).format(
+                me.first_name,
+                owner.mention
+            )
         )
-    )
-    await rest(2)
-    await e.edit_text(
-        (txt.start_02).format(
-            me.first_name,
-            owner.mention
-        )
-    )
-    await rest(2)
-    await e.edit_text(txt.start_03)        
-    
+        await rest(2)
+        await e.edit_text(txt.start_03)
+    if m.chat.id != user.id:
+        await m.reply(404)
