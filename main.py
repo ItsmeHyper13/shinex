@@ -14,13 +14,14 @@ sree = Client(
     plugins=dict(root="shinex")
 )
 tim = time.time()
+
 async def main():
-    async with sree:
-        try:
-            await sree.send_message(-1001491370204, "ʙᴏᴛ sᴛᴀʀᴛᴇᴅ 🥀")
-        except Exception as e:
-            print(e)
-            pass
+    try:
+        await sree.send_message(-1001491370204, "ʙᴏᴛ sᴛᴀʀᴛᴇᴅ 🥀")
+    except Exception as e:
+        print(e)
+        pass
+    
 print("""╭┈┈┈┈┈┈┈┈┈┈┈┈𑁍ࠬ┈┈┈╮
 ❝ʙᴏᴛ ɪs ᴀʟɪᴠᴇ🎗⚡❞
 ❝sᴛᴀᴛᴜs » sᴛᴀʀᴛᴇᴅ 🥀❞
@@ -30,4 +31,4 @@ print("""╭┈┈┈┈┈┈┈┈┈┈┈┈𑁍ࠬ┈┈┈╮
 
 sree.start()
 idle()
-await main()
+main()
