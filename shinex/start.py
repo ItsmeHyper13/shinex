@@ -14,8 +14,8 @@ START = hndl.START_CMD
 @sree.on_message(filters.command(START))
 async def start(sree, m: Message):
     user = m.from_user
-    me = await sree.get_user("me")
-    owner = await sree.get_user(OWNER_ID)
+    me = await sree.get_users("me")
+    owner = await sree.get_users(OWNER_ID)
     e = await m.reply(
         (txt.start_01).format(
             user.mention
