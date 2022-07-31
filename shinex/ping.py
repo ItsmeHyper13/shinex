@@ -39,7 +39,6 @@ def get_readable_time(seconds: int) -> str:
 @sree.on_message(filters.command(hndl.PING_CMD) & filters.group)
 async def ping(sree, m: Message):
     start_time = time.time()
-    me = await sree.get_users("me")
     up = get_readable_time((time.time() - tim))
     end_time = time.time()
     ping1 = str(round((end_time - start_time) * 1000, 3)) + " ms"
@@ -48,7 +47,6 @@ async def ping(sree, m: Message):
         await rest(1.5)
         await e.edit_text(
             (txt.ping_03).format(
-                me.first_name,
                 ping1,
                 up,
             )
