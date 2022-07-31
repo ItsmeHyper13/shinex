@@ -12,8 +12,8 @@ SUDO_USERS.append(int(d_02))
 SUDO_USERS.append(int(d_03))
 
 def sudos(func: Callable) -> Callable:
-    async def noic(client: Client, m: Message):
+    async def noic(sree, m: Message):
         if m.from_user.id in SUDO_USERS:
-            return await func(client, m)
+            return await func(sree, m)
 
     return noic
