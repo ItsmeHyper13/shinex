@@ -3,3 +3,4 @@
 # created by ItsmeHyper13
 
 START_CMD = ["start"]
+PING_CMD = ["ping","test"]
