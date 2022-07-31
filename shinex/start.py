@@ -5,11 +5,16 @@ import time, datetime
 from asyncio import sleep as rst
 from pyrogram import Client as sree
 from pyrogram import filters
-from strings import handlers as hndl
+from strings import handlers as hndl, strs as txt
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 
 START = hndl.START_CMD
 
 @sree.on_message(filters.command(START))
 async def start(sree, m: Message):
-    await m.reply("Hey i am alive!")
+    user = m.from_user
+    await m.reply(
+        (txt.start_01).format(
+            user.mention
+        )
+    )
