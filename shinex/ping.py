@@ -3,7 +3,8 @@
 # created by ItsmeHyper13
 import re
 from sys import argv
-import time, datetime, platform
+import time, platform
+from datetime import datetime
 from asyncio import sleep as rest
 from pyrogram import Client as sree
 from pyrogram import filters, __version__ as pyro
