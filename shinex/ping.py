@@ -44,8 +44,10 @@ async def ping(sree, m: Message):
     end_time = time.time()
     ping1 = str(round((end_time - start_time) * 1000, 3)) + " ms"
     if m.from_user.id in sudo:
-        e = await m.reply(txt.ping_01)
-        await rest(1.5)
+        e = await m.reply('⚡')
+        await rest(3)
+        await e.edit_text(txt.ping_01)
+        await rest(1)
         await e.edit_text(
             (txt.ping_03).format(
                 ping1,
