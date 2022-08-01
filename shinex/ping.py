@@ -7,7 +7,8 @@ from datetime import datetime
 from asyncio import sleep as rest
 from pyrogram import Client as sree
 from pyrogram import filters, __version__ as pyro
-from vars import OWNER_ID as owner, SUDO_USERS as sudo
+from vars import OWNER_ID as owner
+from strings.dict import SUDO_USERS as sudo
 from strings import handlers as hndl, strs as txt
 from main import tim
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
