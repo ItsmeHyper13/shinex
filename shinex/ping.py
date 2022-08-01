@@ -54,5 +54,5 @@ async def ping(sree, m: Message):
                 up,
             )
         )
-    if m.from_user.id not in sudo or m.from_user.id != owner:
+    if m.from_user.id not in sudo:
         await m.reply((txt.ping_02).format(sender.id))
