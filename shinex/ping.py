@@ -35,6 +35,7 @@ def get_readable_time(seconds: int) -> str:
     ping_time += ":".join(time_list)
 
     return ping_time
+ok = list(sudo,owner)
 
 @sree.on_message(filters.command(hndl.PING_CMD, prefixes=list("./")) & filters.group)
 async def ping(sree, m: Message):
@@ -54,5 +55,5 @@ async def ping(sree, m: Message):
                 up,
             )
         )
-    if m.from_user.id not in (sudo or owner):
+    if m.from_user.id not in ok:
         await m.reply((txt.ping_02).format(sender.id))
