@@ -10,6 +10,7 @@ async def ban(sree, m: Message):
   await m.reply_text(f"`Banned Successfully `\n{m.reply_to_message.from_user.mention} Unkil GoAway 😒\n")
 
 @sree.on_message(filters.command('unban', prefixes=[".",'/']))
-async def unban(devu, m: Message):
-  await sree.unban_chat_member(chat_id=m.chat.id, user_id=m.reply_to_message.from_user.id)
-  await m.reply_text(f"`UnBanned Successfully `\n{m.reply_to_message.from_user.mention} Can Join Again 👀\n")
+async def unban(devu, message: Message):
+  user_id, user_first_name = (message.reply_to_message.sender_chat.id,message.reply_to_message.sender_chat.title)
+  await sree.unban_chat_member(chat_id=message.chat.id, user_id)
+  await message.reply_text(f"`UnBanned Successfully `\n{message.reply_to_message.from_user.mention} Can Join Again 👀\n")
