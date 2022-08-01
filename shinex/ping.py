@@ -7,7 +7,7 @@ from datetime import datetime
 from asyncio import sleep as rest
 from pyrogram import Client as sree
 from pyrogram import filters, __version__ as pyro
-from vars import OWNER_ID, SUDO_USERS as sudo
+from vars import OWNER_ID as owner, SUDO_USERS as sudo
 from strings import handlers as hndl, strs as txt
 from main import tim
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
@@ -43,7 +43,7 @@ async def ping(sree, m: Message):
     up = get_readable_time((time.time() - tim))
     end_time = time.time()
     ping1 = str(round((end_time - start_time) * 1000, 3)) + " ms"
-    if m.from_user.id in sudo:
+    if m.from_user.id in sudo or m.from_user.id == owner:
         e = await m.reply('⚡')
         await rest(3)
         await e.edit_text(txt.ping_01)
@@ -54,5 +54,5 @@ async def ping(sree, m: Message):
                 up,
             )
         )
-    if m.from_user.id not in sudo:
+    if m.from_user.id not in sudo or m.from_user.id != owner:
         await m.reply((txt.ping_02).format(sender.id))
