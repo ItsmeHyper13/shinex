@@ -24,9 +24,9 @@ print("""╭┈┈┈┈┈┈┈┈┈┈┈┈𑁍ࠬ┈┈┈╮
 ╰┈┈┈𑁍ࠬ┈┈┈┈┈┈┈┈┈┈┈┈╯""")
 
 async def main():
+    await app.send_message(-1001716841090, "Hey i am alibe")
     await idle()
-    await sree.start()
     await main()
 
-#sree.start()
+sree.start()
 #await idle()
