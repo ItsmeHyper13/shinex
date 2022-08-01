@@ -8,6 +8,6 @@ from vars import SUDO_USERS as sudo
 
 @sree.on_message(filters.command(hndl.SUDO_CMD, prefixes=list("./")))
 async def sudos(sree, m: Message):
-    await message.reply(
+    await m.reply(
         (txt.sudos_01).format(sudo)
     )            
