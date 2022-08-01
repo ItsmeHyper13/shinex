@@ -39,6 +39,7 @@ def get_readable_time(seconds: int) -> str:
 @sree.on_message(filters.command(hndl.PING_CMD) & filters.group)
 async def ping(sree, m: Message):
     start_time = time.time()
+    sender = m.from_user
     up = get_readable_time((time.time() - tim))
     end_time = time.time()
     ping1 = str(round((end_time - start_time) * 1000, 3)) + " ms"
