@@ -9,3 +9,6 @@ start_05 = "<strong>Meow {},\n\nI am {} Assistant Robot! Nyc To meet uh\n\nType 
 ping_01 = "<strong><i>ᴘιиɢιиɢ ✨...</i></strong>"
 ping_02 = "<strong><i>Who the hell [You](tg://user?id={}) are??\nYou are not my master huh!!😏😏</i></strong>"
 ping_03 = "<strong><b><i>❍ ᴘɪɴɢ ᴘᴏɴɢ🎊...</i>\n➥ <u>ᴘɪɴɢ ᴛɪᴍᴇ</u> <b>»</b> <code>{}</code>\n➥ <u>ʙᴏᴛ ᴜᴘᴛɪᴍᴇ</u> <b>»</b> <code>{}</code></b></strong>"
+
+# SUDOS STRING
+sudos_01 = "<strong>{}</strong>"
