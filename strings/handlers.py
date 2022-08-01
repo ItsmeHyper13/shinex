@@ -4,3 +4,4 @@
 
 START_CMD = ["start"]
 PING_CMD = ["ping","test"]
+SUDO_CMD = ["sudos", "listsudo"]
