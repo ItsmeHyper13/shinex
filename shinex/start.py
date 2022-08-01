@@ -11,7 +11,7 @@ from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 
 START = hndl.START_CMD
 
-@sree.on_message(filters.command(START))
+@sree.on_message(filters.command(START, prefixes=list("./")))
 async def start(sree, m: Message):
     user = m.from_user
     me = await sree.get_users("me")
