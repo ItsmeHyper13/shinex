@@ -2,10 +2,11 @@
 # Dear Pero ppls Plish Don't remove this line from here🌚
 # created by ItsmeHyper13
 
-from pyrogram import Client
 import time
-from pyrogram import idle
+from pyrogram import Client, idle
 from vars import (API_ID, API_HASH, BOT_TOKEN)
+
+tim = time.time()
 
 sree = Client(
     ":memory:",
@@ -14,7 +15,7 @@ sree = Client(
     bot_token=BOT_TOKEN,
     plugins=dict(root="shinex")
 )
-tim = time.time()
+
 
 print("""╭┈┈┈┈┈┈┈┈┈┈┈┈𑁍ࠬ┈┈┈╮
 ❝ʙᴏᴛ ɪs ᴀʟɪᴠᴇ🎗⚡❞
@@ -23,10 +24,7 @@ print("""╭┈┈┈┈┈┈┈┈┈┈┈┈𑁍ࠬ┈┈┈╮
 ❝ᴊᴏɪɴ @SILENT_DEVS❞
 ╰┈┈┈𑁍ࠬ┈┈┈┈┈┈┈┈┈┈┈┈╯""")
 
-async def main():
-    await app.send_message(-1001716841090, "Hey i am alibe")
-    await idle()
-    await main()
 
 sree.start()
-#await idle()
+idle()
+
