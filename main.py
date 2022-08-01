@@ -26,7 +26,7 @@ print("""╭┈┈┈┈┈┈┈┈┈┈┈┈𑁍ࠬ┈┈┈╮
 async def main():
     await idle()
     await sree.start()
-main()
+    await main()
 
 #sree.start()
 #await idle()
