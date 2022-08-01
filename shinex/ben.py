@@ -11,5 +11,5 @@ async def ban(sree, m: Message):
 
 @sree.on_message(filters.command('unban', prefixes=[".",'/']))
 async def unban(devu, m: Message):
-  await sree.unban_chat_member(m.chat.id, user_id=m.reply_to_message.from_user.id)
+  await sree.unban_chat_member(chat_id=m.chat.id, user_id=m.reply_to_message.from_user.id)
   await m.reply_text(f"`UnBanned Successfully `\n{m.reply_to_message.from_user.mention} Can Join Again 👀\n")
