@@ -5,3 +5,4 @@
 START_CMD = ["start"]
 PING_CMD = ["ping","test"]
 SUDO_CMD = ["sudos", "listsudo"]
+BAN_CMD = ["ban", "ben", "fuckoff"]
