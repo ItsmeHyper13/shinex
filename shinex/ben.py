@@ -21,7 +21,6 @@ async def banthisgay(sree, m: Message):
                         chut.title,
                         usr.mention,
                         usr.id,
-                        sender.first_name
                     )
                 )
             except Exception as e:
@@ -37,7 +36,6 @@ async def banthisgay(sree, m: Message):
                         chut.title,
                         usrr.mention,
                         usrr.id,
-                        sender.first_name
                     )   
                 )   
             except:
