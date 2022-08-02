@@ -10,5 +10,5 @@ from vars import SUDO_USERS as sudo, OWNER_ID as owner
 async def sudos(sree, m: Message):
     if m.from_user.id in sudo:
         await m.reply(
-            (txt.sudos_01).format(sudo.remove(owner)))
+            (txt.sudos_01).format(sudo.remove(owner))
         )            
