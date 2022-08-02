@@ -27,8 +27,8 @@ async def banthisgay(sree, m: Message):
             except Exception as e:
                 print(e)
         if len(m.command) == 2:
-        s = m.text.split(None, 1)[1].strip()
-        usrr = (await sree.get_users(s))
+            s = m.text.split(None, 1)[1].strip()
+            usrr = (await sree.get_users(s))
             try:
                 await sree.ban_chat_member(m.chat.id, usrr.id)
                 await sree.send_message(
