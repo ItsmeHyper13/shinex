@@ -9,10 +9,10 @@ from strings import handlers as hndl, strs as txt
 @sree.on_message(filters.command(hndl.BAN_CMD, prefixes=list("./")) & filters.group)
 async def banthisgay(sree, m: Message):
     chut = await sree.get_chat(m.chat.id)
-    usr = await sree.get_users(m.reply_to_message.from_user.id)
     sender = m.from_user
     if sender.id in sudo:
         if len(m.command) == 1:
+            usr = await sree.get_users(m.reply_to_message.from_user.id)
             try:
                 await sree.ban_chat_member(m.chat.id, usr.id)
                 await sree.send_message(
