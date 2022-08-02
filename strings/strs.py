@@ -12,3 +12,7 @@ ping_03 = "<strong><b><i>❍ ᴘɪɴɢ ᴘᴏɴɢ🎊...</i>\n➥ <u>ᴘɪɴɢ �
 
 # SUDOS STRING
 sudos_01 = "<strong>{}</strong>"
+
+# BAN STRINGS
+ban_01 = "<code>🛡️</code><b>ʙᴀɴ ᴇᴠᴇɴᴛ ɪɴ `{}`!!</b>\n<b>✿  ᴜsᴇʀ:</b> {}\n    ➥ [ <code>{}</code> ]\n✿ ʙᴀɴɴᴇᴅ ʙʏ: {}"
+ban_02 = "<strong>I can't find out this user</strong>"
