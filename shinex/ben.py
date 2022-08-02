@@ -15,8 +15,7 @@ async def banthisgay(sree, m: Message):
             usr = await sree.get_users(m.reply_to_message.from_user.id)
             try:
                 await sree.ban_chat_member(m.chat.id, usr.id)
-                await m.reply(
-                    m.chat.id,
+                await m.reply(                  
                     (txt.ban_01).format(
                         chut.title,
                         usr.mention,
@@ -31,7 +30,6 @@ async def banthisgay(sree, m: Message):
             try:
                 await sree.ban_chat_member(m.chat.id, usrr.id)
                 await m.reply(
-                    m.chat.id,
                     (txt.ban_01).format(
                         chut.title,
                         usrr.mention,
