@@ -8,10 +8,38 @@ from strings import handlers as hndl, strs as txt
 
 @sree.on_message(filters.command(hndl.BAN_CMD, prefixes=list("./")) & filters.group)
 async def banthisgay(sree, m: Message):
+    chut = await sree.get_chat(m.chat.id)
+    usr = await sree.get_users(m.reply_to_message.from_user.id)
     sender = m.from_user
     if sender.id in sudo:
-        await app.ban_chat_member(m.chat.id, m.reply_to_message.from_user.id)
-        await app.send_message(
-            m.chat.id,
-            (txt.ban_01).format(
-                
+        if len(m.command) == 1:
+            try:
+                await sree.ban_chat_member(m.chat.id, usr.id)
+                await sree.send_message(
+                    m.chat.id,
+                    (txt.ban_01).format(
+                        chut.title,
+                        usr.mention,
+                        usr.id,
+                        sender.first_name
+                    )
+                )
+            except Exception as e:
+                print(e)
+        if len(m.command) == 2:
+        s = m.text.split(None, 1)[1].strip()
+        usrr = (await sree.get_users(s))
+            try:
+                await sree.ban_chat_member(m.chat.id, usrr.id)
+                await sree.send_message(
+                    m.chat.id,
+                    (txt.ban_01).format(
+                        chut.title,
+                        usrr.mention,
+                        usrr.id,
+                        sender.first_name
+                    )   
+                )   
+            except:
+                await message.reply(txt.ban_02)
+
