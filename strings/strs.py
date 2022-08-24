@@ -1,6 +1,8 @@
 # START STRINGS!!
 start_01 = "<strong>Hey {} ✨🎉 !</strong>"
-start_02 = "<strong>Welcome to <code>{}</code>'s pm!\nI am assistant robot of  @{} !</strong>"
+start_02 = (
+    "<strong>Welcome to <code>{}</code>'s pm!\nI am assistant robot of  @{} !</strong>"
+)
 start_03 = "<strong>Hehe, I am preparing for a good start message for you 🐋</strong>"
 start_04 = "CAACAgUAAx0CaFEo6QACBO9i5mLmMTGBOVF4ktgq1zfVLY-91gACUAADEZtjNEx9VCzCicurKQQ"
 start_05 = "<strong>Meow {},\n\nI am {} Assistant Robot! Nyc To meet uh\n\nType <code>/help</code> and explore commands! Don't forget to join @SilentVerse</strong>"

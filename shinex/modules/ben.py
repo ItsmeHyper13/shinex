@@ -2,11 +2,15 @@
 # Dear Pero ppls Plish Don't remove this line from here🌚
 # created by ItsmeHyper13
 
-from pyrogram import Client as sree, filters
-from vars import SUDO_USERS as sudo, OWNER_ID as owner
-from pyrogram.types import Message, InlineKeyboardButton, InlineKeyboardMarkup     
-from strings import handlers as hndl, strs as txt
+from pyrogram import Client as sree
+from pyrogram import filters
+from pyrogram.types import Message
+
 from shinex import sree
+from strings import handlers as hndl
+from strings import strs as txt
+from vars import SUDO_USERS as sudo
+
 
 @sree.on_message(filters.command(hndl.BAN_CMD, prefixes=list("./")) & filters.group)
 async def banthisgay(sree, m: Message):
@@ -17,7 +21,7 @@ async def banthisgay(sree, m: Message):
             usr = await sree.get_users(m.reply_to_message.from_user.id)
             try:
                 await sree.ban_chat_member(m.chat.id, usr.id)
-                await m.reply(                  
+                await m.reply(
                     (txt.ban_01).format(
                         chut.title,
                         usr.mention,
@@ -28,7 +32,7 @@ async def banthisgay(sree, m: Message):
                 print(e)
         if len(m.command) == 2:
             s = m.text.split(None, 1)[1].strip()
-            usrr = (await sree.get_users(s))
+            usrr = await sree.get_users(s)
             try:
                 await sree.ban_chat_member(m.chat.id, usrr.id)
                 await m.reply(
@@ -36,8 +40,7 @@ async def banthisgay(sree, m: Message):
                         chut.title,
                         usrr.mention,
                         usrr.id,
-                    )   
-                )   
+                    )
+                )
             except:
                 await message.reply(txt.ban_02)
-

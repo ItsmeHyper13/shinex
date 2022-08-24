@@ -1,16 +1,20 @@
 # Powered by @HYPER_AD13 | @ShiningOff
 # Dear Pero ppls Plish Don't remove this line from here🌚
 # created by ItsmeHyper13
-import re, time
-from sys import argv
-from datetime import datetime
+import time
 from asyncio import sleep as rest
+
 from pyrogram import Client as sree
-from pyrogram import filters, __version__ as pyro
-from vars import OWNER_ID as owner, SUDO_USERS as sudo
-from strings import handlers as hndl, strs as txt
-from shinex import sree, boot as tim
-from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
+from pyrogram import filters
+from pyrogram.types import Message
+
+from shinex import boot as tim
+from shinex import sree
+from strings import handlers as hndl
+from strings import strs as txt
+from vars import OWNER_ID as owner
+from vars import SUDO_USERS as sudo
+
 
 def get_readable_time(seconds: int) -> str:
     count = 0
@@ -36,7 +40,9 @@ def get_readable_time(seconds: int) -> str:
 
     return ping_time
 
+
 sudo.append(owner)
+
 
 @sree.on_message(filters.command(hndl.PING_CMD, prefixes=list("./")) & filters.group)
 async def ping(sree, m: Message):
@@ -46,7 +52,7 @@ async def ping(sree, m: Message):
     end_time = time.time()
     ping1 = str(round((end_time - start_time) * 1000, 3)) + " ms"
     if m.from_user.id in sudo:
-        e = await m.reply('⚡')
+        e = await m.reply("⚡")
         await rest(3)
         await e.edit_text(txt.ping_01)
         await rest(1)
