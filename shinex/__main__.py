@@ -2,7 +2,7 @@
 
 
 from shinex import sree, BOT_TOKEN as TOKEN 
-from shinex.modules import __load_modules
+from shinex.modules import ALL_MODULES
 
 
 sree.start(bot_token=TOKEN)
