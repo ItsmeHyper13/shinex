@@ -9,7 +9,7 @@ from pyrogram import Client as sree
 from pyrogram import filters, __version__ as pyro
 from vars import OWNER_ID as owner, SUDO_USERS as sudo
 from strings import handlers as hndl, strs as txt
-from shinex import boot as tim
+from shinex import sree, boot as tim
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 
 def get_readable_time(seconds: int) -> str:
