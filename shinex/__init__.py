@@ -27,7 +27,7 @@ BOT_TOKEN = getenv("BOT_TOKEN")
 API_KEY = getenv("API_KEY")
 API_HASH = getenv("API_HASH")
 OWNER_ID = int(getenv("OWNER_ID", 0))
-SUDO_USERS = int(getenv("SUDO_USERS") 
+SUDO_USERS = getenv("SUDO_USERS") 
 
 for key in ["API_KEY", "API_HASH", "BOT_TOKEN", "OWNER_ID", "SUDO_USERS"]:
     if not getenv(key):
