@@ -24,12 +24,12 @@ logging.basicConfig(
 )
 
 BOT_TOKEN = getenv("BOT_TOKEN")
-API_KEY = getenv("API_KEY")
+API_ID = getenv("API_ID")
 API_HASH = getenv("API_HASH")
 OWNER_ID = int(getenv("OWNER_ID", 0))
 SUDO_USERS = getenv("SUDO_USERS") 
 
-for key in ["API_KEY", "API_HASH", "BOT_TOKEN", "OWNER_ID", "SUDO_USERS"]:
+for key in ["API_ID", "API_HASH", "BOT_TOKEN", "OWNER_ID", "SUDO_USERS"]:
     if not getenv(key):
         print(f"Please setup {str(key)}")
         try:
@@ -40,11 +40,11 @@ for key in ["API_KEY", "API_HASH", "BOT_TOKEN", "OWNER_ID", "SUDO_USERS"]:
         environ[str(key)] = value
     if not path.exists(".env"):
         with open(".env", "w") as f:
-            for key in ["API_KEY", "API_HASH", "BOT_TOKEN", "OWNER_ID", "SUDO_USERS"]:
+            for key in ["API_ID", "API_HASH", "BOT_TOKEN", "OWNER_ID", "SUDO_USERS"]:
                 if key in environ:
                     f.write(f"{str(key)}={environ[str(key)]}\n")
 
-bot = TelegramClient(None, api_id=API_KEY, api_hash=API_HASH)
+bot = TelegramClient(None, api_id=API_ID, api_hash=API_HASH)
 
 sree = Client(
     ":shinex:",
@@ -53,8 +53,8 @@ sree = Client(
     bot_token=vars.BOT_TOKEN,
 )
 
-client = TelegramClient("client", API_KEY, API_HASH).start(bot_token=TOKEN)
-telethn = TelegramClient("Hyper", API_KEY, API_HASH)
+client = TelegramClient("client", API_ID, API_HASH).start(bot_token=TOKEN)
+telethn = TelegramClient("Hyper", API_ID, API_HASH)
 
 async def rani_boot():
     global BOT_ID, BOT_NAME, BOT_USERNAME
@@ -70,4 +70,5 @@ async def rani_boot():
 
                  
 loop.run_until_complete(rani_boot())
+
 sree.start(bot_token=vars.BOT_TOKEN) 
