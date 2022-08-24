@@ -53,7 +53,7 @@ sree = Client(
     bot_token=vars.BOT_TOKEN,
 )
 
-client = TelegramClient("client", API_ID, API_HASH).start(bot_token=TOKEN)
+client = TelegramClient("client", API_ID, API_HASH).start(bot_token=BOT_TOKEN)
 telethn = TelegramClient("Hyper", API_ID, API_HASH)
 
 async def rani_boot():
