@@ -71,4 +71,4 @@ async def rani_boot():
                  
 loop.run_until_complete(rani_boot())
 
-sree.start(bot_token=vars.BOT_TOKEN) 
+#sree.start(bot_token=vars.BOT_TOKEN) 
