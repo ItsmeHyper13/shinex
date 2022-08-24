@@ -1,6 +1,6 @@
 
 
-
+import asyncio 
 from shinex import sree, BOT_TOKEN as TOKEN 
 from shinex.modules import ALL_MODULES
 
