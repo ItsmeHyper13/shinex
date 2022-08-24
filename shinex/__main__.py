@@ -1,17 +1,27 @@
 
-
-
+import importlib
+import asyncio 
 from shinex import sree, BOT_TOKEN as TOKEN 
-from shinex.modules import __load_modules
+from shinex.modules import ALL_MODULES
+from pyrogram import filters, idle
 
-
-sree.start(bot_token=TOKEN)
+loop = asyncio.get_event_loop()
     
         
-__load_modules()
+async def xxx_boot():
+    for all_module in ALL_MODULES:
+        importlib.import_module("shinex.modules." + all_module)
+    print("────────────BOT START────────────")
+    await idle()
+    print("GoodBye! Stopping Bot")
 
 
-sree.run_until_disconnected()     
+if __name__ == "__main__":
+    loop.run_until_complete(xxx_boot())
+
+
+
+     
     
 
 
