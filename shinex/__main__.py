@@ -5,7 +5,7 @@ from shinex import sree, BOT_TOKEN as TOKEN
 from shinex.modules import ALL_MODULES
 
 
-sree.start(bot_token=TOKEN)
+#sree.start(bot_token=TOKEN)
     
         
 async def xxx_boot():
