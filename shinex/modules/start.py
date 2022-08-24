@@ -8,6 +8,7 @@ from pyrogram import filters
 from vars import OWNER_ID
 from strings import handlers as hndl, strs as txt
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
+from shinex import sree
 
 START = hndl.START_CMD
 

@@ -6,6 +6,7 @@ from pyrogram import Client as sree, filters
 from pyrogram.types import Message, InlineKeyboardButton, InlineKeyboardMarkup
 from strings import strs as txt, handlers as hndl
 from vars import SUDO_USERS as sudo, OWNER_ID as owner
+from shinex import sree 
 
 @sree.on_message(filters.command(hndl.SUDO_CMD, prefixes=list("./")))
 async def sudos(sree, m: Message):
