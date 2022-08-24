@@ -6,6 +6,7 @@ from pyrogram import Client as sree, filters
 from vars import SUDO_USERS as sudo, OWNER_ID as owner
 from pyrogram.types import Message, InlineKeyboardButton, InlineKeyboardMarkup     
 from strings import handlers as hndl, strs as txt
+from shinex import sree
 
 @sree.on_message(filters.command(hndl.BAN_CMD, prefixes=list("./")) & filters.group)
 async def banthisgay(sree, m: Message):
