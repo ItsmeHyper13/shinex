@@ -48,8 +48,8 @@ bot = TelegramClient(None, api_id=API_ID, api_hash=API_HASH)
 
 sree = Client(
     ":shinex:",
-    config.API_KEY,
-    config.API_HASH,
+    vars.API_KEY,
+    vars.API_HASH,
     bot_token=vars.BOT_TOKEN,
 )
 
