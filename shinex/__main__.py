@@ -1,13 +1,13 @@
-
+import asyncio
 import importlib
-import asyncio 
-from shinex import sree, BOT_TOKEN as TOKEN 
+
+from pyrogram import idle
+
 from shinex.modules import ALL_MODULES
-from pyrogram import filters, idle
 
 loop = asyncio.get_event_loop()
-    
-        
+
+
 async def xxx_boot():
     for all_module in ALL_MODULES:
         importlib.import_module("shinex.modules." + all_module)
@@ -18,12 +18,3 @@ async def xxx_boot():
 
 if __name__ == "__main__":
     loop.run_until_complete(xxx_boot())
-
-
-
-     
-    
-
-
-
-

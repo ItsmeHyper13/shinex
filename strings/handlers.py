@@ -3,6 +3,6 @@
 # created by ItsmeHyper13
 
 START_CMD = ["start"]
-PING_CMD = ["ping","test"]
+PING_CMD = ["ping", "test"]
 SUDO_CMD = ["sudos", "listsudo"]
 BAN_CMD = ["ban", "ben", "fuckoff"]
