@@ -8,10 +8,20 @@ from shinex.modules import __load_modules
 sree.start(bot_token=TOKEN)
     
         
-__load_modules()
+async def xxx_boot():
+    for all_module in ALL_MODULES:
+        importlib.import_module("shinex.modules." + all_module)
+    print("────────────BOT START────────────")
+    await idle()
+    print("GoodBye! Stopping Bot")
 
 
-sree.run_until_disconnected()     
+if __name__ == "__main__":
+    loop.run_until_complete(xxx_boot())
+
+
+
+     
     
 
 
