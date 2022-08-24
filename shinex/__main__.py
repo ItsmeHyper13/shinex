@@ -3,7 +3,7 @@ import importlib
 import asyncio 
 from shinex import sree, BOT_TOKEN as TOKEN 
 from shinex.modules import ALL_MODULES
-
+from pyrogram import filters, idle
 
 loop = asyncio.get_event_loop()
     
