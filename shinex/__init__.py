@@ -4,7 +4,7 @@ import logging
 from importlib import import_module
 from os import environ, getenv, listdir, path
 from dotenv import load_dotenv
-from pymongo import MongoClient, errors
+
 from telethon import TelegramClient
 import vars
 from pyrogram import Client
